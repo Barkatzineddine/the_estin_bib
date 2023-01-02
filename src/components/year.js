@@ -20,10 +20,10 @@ export default function Year ({data,nosem2}){
           
            
               <div key={1} id={data.year.year} className="Cp">
-              <a href={data.year.link}> <span className="title_cp">{data.year.year}</span></a>
+              <a href={data.year.link} target="_blank"> <span className="title_cp">{data.year.year}</span></a>
                 <div className="semestres">
                   <div className="semestre_1">
-                   <a href={data.modules_S1.link}><header>Semestre 01</header></a> 
+                   <a href={data.modules_S1.link} target="_blank"><header>Semestre 01</header></a> 
                     <div className="modules">
                       {data.modules_S1.modules.map((module, index) => {
                       if(module.module_name!==""){
@@ -33,7 +33,7 @@ export default function Year ({data,nosem2}){
                             className=
                               "module_container"
                           >
-                            <a href={module.link}>
+                            <a href={module.link} target="_blank">
                             <div className="module">
                               
                               <div className="img_name">
@@ -58,7 +58,7 @@ export default function Year ({data,nosem2}){
                     </div>
                   </div>
                   {!nosem2 && <div className="semestre_2">
-                    <a href={data.modules_S2.link}><header>Semestre 02</header></a>
+                    <a href={data.modules_S2.link} target="_blank"><header>Semestre 02</header></a>
                     <div className="modules">
                       {data.modules_S2.modules.map((module, index) => {
                         if(module.module_name!==""){
@@ -67,7 +67,7 @@ export default function Year ({data,nosem2}){
                             key={index}
                             className="module_container"
                             >
-                            <a href={module.link}>
+                            <a href={module.link} target="_blank">
                             <div className="module">
                               <div className="img_name">
                                 <img
@@ -108,7 +108,7 @@ export default function Year ({data,nosem2}){
                         src="/left_icon_active.svg"
                       />
                     )}
-                    <a href={!show ?data.modules_S1.link:data.modules_S2.link}> 
+                    <a href={!show ?data.modules_S1.link:data.modules_S2.link} target="_blank"> 
                     <span className="mobile_semestre">
                     {!show? "semestre 01" : "semestre 02"}
                     </span>
@@ -138,7 +138,7 @@ export default function Year ({data,nosem2}){
                                   "module_container"
                               
                             >
-                              <a href={module.link}>
+                              <a href={module.link} target="_blank">
                               <div className="module">
                                 <div className="img_name">
                                   <img
@@ -168,7 +168,7 @@ export default function Year ({data,nosem2}){
                               className=                                 
                                    "module_container"                             
                             >
-                              <a href={module.link}>
+                              <a href={module.link} target="_blank">
                               <div className="module">
                                 <div className="img_name">
                                   <img

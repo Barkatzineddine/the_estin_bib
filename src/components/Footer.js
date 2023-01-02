@@ -24,7 +24,7 @@ const Footer = () => {
                   loading="lazy"
                 />
                 <div class="social-img">
-                  <a href="https://www.linkedin.com/company/gdsc-estin/">
+                  <a href="https://www.linkedin.com/company/gdsc-estin/" target="_blank">
                     {" "}
                     <img
                       class="linkdin"
@@ -33,7 +33,7 @@ const Footer = () => {
                       loading="lazy"
                     />{" "}
                   </a>
-                  <a href="https://www.instagram.com/gdsc_estin/">
+                  <a href="https://www.instagram.com/gdsc_estin/" target="_blank">
                     {" "}
                     <img
                       class="insta"
@@ -42,7 +42,7 @@ const Footer = () => {
                       loading="lazy"
                     />{" "}
                   </a>
-                  <a href="https://facebook.com/gdscestin">
+                  <a href="https://facebook.com/gdscestin" target="_blank">
                     {" "}
                     <img
                       class="fb"
@@ -94,7 +94,7 @@ const Footer = () => {
           loading="lazy"
         />
         <div class="social-img">
-          <a href="https://www.linkedin.com/company/gdsc-estin/">
+          <a href="https://www.linkedin.com/company/gdsc-estin/" target="_blank">
             {" "}
             <img
               class="linkdin"
@@ -103,7 +103,7 @@ const Footer = () => {
               loading="lazy"
             />{" "}
           </a>
-          <a href="https://www.instagram.com/gdsc_estin/">
+          <a href="https://www.instagram.com/gdsc_estin/" target="_blank">
             {" "}
             <img
               class="insta"
@@ -112,7 +112,7 @@ const Footer = () => {
               loading="lazy"
             />{" "}
           </a>
-          <a href="https://facebook.com/gdscestin">
+          <a href="https://facebook.com/gdscestin" target="_blank">
             {" "}
             <img class="fb" src="./fb.svg" alt="img" loading="lazy" />{" "}
           </a>

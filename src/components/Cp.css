@@ -36,11 +36,13 @@ padding-bottom: 150px;
   
 }
 
-.title_cp:hover{
-  background: -webkit-linear-gradient(#eee, #333);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+.CCP .title_cp:hover{
+ background-color: #3e60b1 ;
 
+}
+
+.CCS .title_cp:hover{
+  background-color: #d37231;
 }
 
 .modules a{
@@ -74,9 +76,7 @@ header{
 }
 
 .semestres header:hover{
-  background: -webkit-linear-gradient(#eee, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+ background-color: #3e60b1;
 }
 
 .mobile_semestre:hover{

@@ -68,13 +68,14 @@ input {
   
   border-radius: 4px;
   outline: none;
-  width: 210px;
+  width: 100%;
   margin: 0.4em;
   padding: 10px;
   border-style: none;
 }
 textarea {
-  width: 210px;
+  resize: none;
+  width: 100%;
   margin: 0.4em;
   padding: 10px;
   border-radius: 4px;
@@ -138,7 +139,7 @@ textarea::placeholder {
   width: 60%;
 }
 .content button{
-  width: 80%;
+  width: 105%;
 }
 .corner {
   position: absolute;
@@ -186,6 +187,10 @@ textarea::placeholder {
     flex-direction: column;
     color: white;
     font-family: "Poppins";
+  }
+
+  input,textarea{
+    width: 70%;
   }
   .bottom-page {
     display: none;

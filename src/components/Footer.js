@@ -1,7 +1,6 @@
 import "./footer.css";
 
-
-const Footer = ()=> {
+const Footer = () => {
   return (
     <>
       <div class="bottom-page">
@@ -10,17 +9,48 @@ const Footer = ()=> {
             <div class="collect-content">
               <div class="content">
                 <p>“Sharing is caring”</p>
-                <button>
-                  Contribuer<a href=""></a>
-                </button>
+
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSccoCvtx3B7JIcNkaw9HmhAslbD_AtH61yetyYeUkrLGrVdwA/viewform?usp=sf_link">
+                    <button>
+                    Contribuer
+                   </button>
+                </a>
               </div>
               <div class="content">
-                <img className="img-gdsc" src="./img-gdsc.svg" alt="img" loading="lazy"/>
+                <img
+                  className="img-gdsc"
+                  src="./img-gdsc.svg"
+                  alt="img"
+                  loading="lazy"
+                />
                 <div class="social-img">
-
-                 <a href="https://www.linkedin.com/company/gdsc-estin/"> <img class="linkdin" src="./linkdin.svg" alt="img" loading="lazy"/> </a> 
-                  <a href="https://www.instagram.com/gdsc_estin/"> <img class="insta" src="./insta.svg" alt="img" loading="lazy"/> </a>
-                <a href="https://facebook.com/gdscestin"> <img class="fb" src="./fb.svg" alt="img" loading="lazy"/> </a>  
+                  <a href="https://www.linkedin.com/company/gdsc-estin/" target="_blank">
+                    {" "}
+                    <img
+                      class="linkdin"
+                      src="./linkdin.svg"
+                      alt="img"
+                      loading="lazy"
+                    />{" "}
+                  </a>
+                  <a href="https://www.instagram.com/gdsc_estin/" target="_blank">
+                    {" "}
+                    <img
+                      class="insta"
+                      src="./insta.svg"
+                      alt="img"
+                      loading="lazy"
+                    />{" "}
+                  </a>
+                  <a href="https://facebook.com/gdscestin" target="_blank">
+                    {" "}
+                    <img
+                      class="fb"
+                      src="./fb.svg"
+                      alt="img"
+                      loading="lazy"
+                    />{" "}
+                  </a>
                 </div>
               </div>
             </div>
@@ -38,17 +68,16 @@ const Footer = ()=> {
           </div>
         </div>
 
-        <img class="second-part" src="./estin.svg" alt="img" loading="lazy"/>
+        <img class="second-part" src="./estin.svg" alt="img" loading="lazy" />
         <div class="third-part">
-          
           <p>Made by</p>
-          <img src="./gdsc-tall.svg" alt="" class="img" loading="lazy"/>
+          <img src="./gdsc-tall.svg" alt="" class="img" loading="lazy" />
         </div>
       </div>
 
       <div className="footer_mobile">
         <p>"SHARING IS CARING"</p>
-        <button>Contribuer</button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSccoCvtx3B7JIcNkaw9HmhAslbD_AtH61yetyYeUkrLGrVdwA/viewform?usp=sf_link"><button>Contribuer</button></a>
         <h2>Contact Us</h2>
         <form class="content">
           <input type="text" placeholder="Name" />
@@ -58,21 +87,43 @@ const Footer = ()=> {
         <button>
           Send<a href=""></a>
         </button>
-        <img className="img-gdsc" src="./img-gdsc.svg" alt="img" loading="lazy"/>
+        <img
+          className="img-gdsc"
+          src="./img-gdsc.svg"
+          alt="img"
+          loading="lazy"
+        />
         <div class="social-img">
-
-              <a href="https://www.linkedin.com/company/gdsc-estin/"> <img class="linkdin" src="./linkdin.svg" alt="img" loading="lazy"/> </a> 
-              <a href="https://www.instagram.com/gdsc_estin/"> <img class="insta" src="./insta.svg" alt="img" loading="lazy"/> </a>
-              <a href="https://facebook.com/gdscestin"> <img class="fb" src="./fb.svg" alt="img" loading="lazy"/> </a>  
+          <a href="https://www.linkedin.com/company/gdsc-estin/" target="_blank">
+            {" "}
+            <img
+              class="linkdin"
+              src="./linkdin.svg"
+              alt="img"
+              loading="lazy"
+            />{" "}
+          </a>
+          <a href="https://www.instagram.com/gdsc_estin/" target="_blank">
+            {" "}
+            <img
+              class="insta"
+              src="./insta.svg"
+              alt="img"
+              loading="lazy"
+            />{" "}
+          </a>
+          <a href="https://facebook.com/gdscestin" target="_blank">
+            {" "}
+            <img class="fb" src="./fb.svg" alt="img" loading="lazy" />{" "}
+          </a>
         </div>
-        <img class="second-part" src="./estin.svg" alt="img" loading="lazy"/>
+        <img class="second-part" src="./estin.svg" alt="img" loading="lazy" />
         <div class="third-part">
-          
           <p>Made by</p>
-          <img src="./gdsc-tall.svg" alt="" class="img" loading="lazy"/>
+          <img src="./gdsc-tall.svg" alt="" class="img" loading="lazy" />
         </div>
       </div>
     </>
   );
-}
+};
 export default Footer;

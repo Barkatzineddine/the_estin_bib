@@ -1,45 +1,73 @@
 
 import { useState } from "react";
 import './Cp.css'
-export default function Year ({data}){
+export default function Year ({data,nosem2}){
 
     const [show, setShow] = useState(false);
 
-    const[change,setChange]= useState(1)
+    
 
   
-  const activate=(module)=>{
-    if(!module.active){
-      module.active=true
-    }else{
-      module.active=false
-    }
+ 
 
-    setChange((prevent) => prevent * -1);
+    
 
-  }
+  
 
     return (
       <>
         
           
            
-              <div key={1} id={data.year} className="Cp">
-                <span className="title_cp">{data.year}</span>
+              <div key={1} id={data.year.year} className="Cp">
+              <a href={data.year.link} target="_blank"> <span className="title_cp">{data.year.year}</span></a>
                 <div className="semestres">
                   <div className="semestre_1">
-                    <header>Semestre 01</header>
+                   <a href={data.modules_S1.link} target="_blank"><header>Semestre 01</header></a> 
                     <div className="modules">
-                      {data.modules_S1.map((module, index) => {
+                      {data.modules_S1.modules.map((module, index) => {
+                      if(module.module_name!==""){
                         return (
                           <div
                             key={index}
-                            className={
-                              module.active
-                                ? "module_container clicked"
-                                : "module_container"
-                            }
+                            className=
+                              "module_container"
                           >
+                            <a href={module.link} target="_blank">
+                            <div className="module">
+                              
+                              <div className="img_name">
+                                <img
+                                  alt="img"
+                                  loading="lazy"
+                                  className="fileImg"
+                                  src="/file.svg"
+                                />
+                                <span className="moduleName">
+                                  {module.module_name}
+                                </span>
+                              </div> 
+                            </div>
+                            </a>
+                            
+                          </div>
+                        )}else{
+                          return null
+                        };
+                      })}
+                    </div>
+                  </div>
+                  {!nosem2 && <div className="semestre_2">
+                    <a href={data.modules_S2.link} target="_blank"><header>Semestre 02</header></a>
+                    <div className="modules">
+                      {data.modules_S2.modules.map((module, index) => {
+                        if(module.module_name!==""){
+                        return (
+                          <div
+                            key={index}
+                            className="module_container"
+                            >
+                            <a href={module.link} target="_blank">
                             <div className="module">
                               <div className="img_name">
                                 <img
@@ -52,100 +80,21 @@ export default function Year ({data}){
                                   {module.module_name}
                                 </span>
                               </div>
-                              <img
-                                alt="img"
-                                loading="lazy"
-                                className="drop_down"
-                                src="/dropDown.svg"
-                                onClick={(e) => {
-                                  activate(module);
-  
-                                  if (e.target.style.transform === "") {
-                                    e.target.style.transform = "rotate(180deg)";
-                                  } else {
-                                    e.target.style.transform = "";
-                                  }
-  
-                                  
-                                }}
-                              />
+                            
                             </div>
-                            <div className="drop_div">
-                              {module.tabs.map((tab)=>{
-                                return(
-
-                                  <span><a href={tab.link}>{tab.name}</a></span>
-
-                                )
-                              })}
-                                  
-                            </div>
+                            </a>
                           </div>
-                        );
+                        )}else{
+                          return null
+                        };
                       })}
                     </div>
-                  </div>
-                  <div className="semestre_2">
-                    <header>Semestre 02</header>
-                    <div className="modules">
-                      {data.modules_S2.map((module, index) => {
-                        return (
-                          <div
-                            key={index}
-                            className={
-                              module.active
-                                ? "module_container clicked"
-                                : "module_container"
-                            }
-                          >
-                            <div className="module">
-                              <div className="img_name">
-                                <img
-                                  alt="img"
-                                  loading="lazy"
-                                  className="fileImg"
-                                  src="/file.svg"
-                                />
-                                <span className="moduleName">
-                                  {module.module_name}
-                                </span>
-                              </div>
-                              <img
-                                loading="lazy"
-                                alt="img"
-                                className="drop_down"
-                                src="/dropDown.svg"
-                                onClick={(e) => {
-                                  activate(module);
-  
-                                  if (e.target.style.transform === "") {
-                                    e.target.style.transform = "rotate(180deg)";
-                                  } else {
-                                    e.target.style.transform = "";
-                                  }
-                                }}
-                              />
-                            </div>
-                            <div className="drop_div">
-                              {module.tabs.map((tab)=>{
-                                return(
-
-                                  <span><a href={tab.link}>{tab.name}</a></span>
-
-                                )
-                              })}
-                                  
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
+                  </div>}
                 </div>
 {/****************************************************MOBIIIIIIIIIIIILE******************************************************************************* */}
   
                { <div className="semestres_mobile">
-                  <header>
+                <header>
                     {!show ? (
                       <img className="left_icon_desactive" src="/left_icon_desactive.svg" loading="lazy" alt="img"/>
                     ) : (
@@ -159,7 +108,11 @@ export default function Year ({data}){
                         src="/left_icon_active.svg"
                       />
                     )}
+                    <a href={!show ?data.modules_S1.link:data.modules_S2.link} target="_blank"> 
+                    <span className="mobile_semestre">
                     {!show? "semestre 01" : "semestre 02"}
+                    </span>
+                    </a>
                     {!show? (
                       <img
                         className="right_icon_active"
@@ -176,16 +129,16 @@ export default function Year ({data}){
                   </header>
                   <div className="modules">
                     {!show
-                      ? data.modules_S1.map((module, index) => {
+                      ? data.modules_S1.modules.map((module, index) => {
+                        if(module.module_name!==""){
                           return (
                             <div
                               key={index}
-                              className={
-                                module.active
-                                  ? "module_container clicked"
-                                  : "module_container"
-                              }
+                              className=
+                                  "module_container"
+                              
                             >
+                              <a href={module.link} target="_blank">
                               <div className="module">
                                 <div className="img_name">
                                   <img
@@ -198,47 +151,24 @@ export default function Year ({data}){
                                     {module.module_name}
                                   </span>
                                 </div>
-                                <img
-                                  alt="img"
-                                  loading="lazy"
-                                  className="drop_down"
-                                  src="/dropDown.svg"
-                                  onClick={(e) => {
-                                    activate(module);
-  
-                                    if (e.target.style.transform === "") {
-                                      e.target.style.transform = "rotate(180deg)";
-                                    } else {
-                                      e.target.style.transform = "";
-                                    }
-  
-                                    ;
-                                  }}
-                                />
+                               
                               </div>
-                              <div className="drop_div">
-                              {module.tabs.map((tab)=>{
-                                return(
-
-                                  <span><a href={tab.link}>{tab.name}</a></span>
-
-                                )
-                              })}
-                                  
+                              </a>
+                            
                             </div>
-                            </div>
-                          );
+                          )}else{
+                            return null
+                          };
                         })
-                      : data.modules_S2.map((module, index) => {
+                      : data.modules_S2.modules.map((module, index) => {
+                        if(module.module_name!==""){
                           return (
                             <div
                               key={index}
-                              className={
-                                module.active
-                                  ? "module_container clicked"
-                                  : "module_container"
-                              }
+                              className=                                 
+                                   "module_container"                             
                             >
+                              <a href={module.link} target="_blank">
                               <div className="module">
                                 <div className="img_name">
                                   <img
@@ -251,34 +181,14 @@ export default function Year ({data}){
                                     {module.module_name}
                                   </span>
                                 </div>
-                                <img
-                                  alt="img"
-                                  loading="lazy"
-                                  className="drop_down"
-                                  src="/dropDown.svg"
-                                  onClick={(e) => {
-                                    activate(module);
-  
-                                    if (e.target.style.transform === "") {
-                                      e.target.style.transform = "rotate(180deg)";
-                                    } else {
-                                      e.target.style.transform = "";
-                                    }
-                                  }}
-                                />
+                                
                               </div>
-                              <div className="drop_div">
-                              {module.tabs.map((tab)=>{
-                                return(
-
-                                  <span><a href={tab.link}>{tab.name}</a></span>
-
-                                )
-                              })}
-                                  
+                              </a>
+                           
                             </div>
-                            </div>
-                          );
+                          )}else{
+                            return null
+                          };
                         })}
                   </div>
                 </div>}

@@ -39,6 +39,9 @@
   width: 100%;
   bottom: -30px;
 }
+.intro p{
+  padding: 0 50px 0 50px;
+}
 
 @media screen and (max-width: 1000px) {
   .bib {
@@ -78,6 +81,10 @@
   }
   .intro h1 {
     font-size: 22px;
+  }
+  .intro p{
+    padding: 0 10px 0 10px;
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -119,5 +126,12 @@
 @media screen and (max-width: 1200px) and (min-height: 900px) {
   .intro{
     height: 40vh;
+  }
+}
+@media screen and (max-width: 260px) {
+  
+  .intro p{
+    font-size: 11px;
+
   }
 }

@@ -22,18 +22,20 @@ padding-bottom: 150px;
 .title_cp{
 
   width: 50px;
+  position: relative;
  
   color: white;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
   font-size: 25px;
- 
+  z-index: 1000;
   background: #4B7BEC;
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
   border-radius: 8px;    
   padding: 5px 30px 5px 30px;
   color: #FFFFFF;  
+  box-sizing: border-box;
   
 }
 

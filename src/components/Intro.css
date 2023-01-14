@@ -41,6 +41,7 @@
 }
 .intro p{
   padding: 0 50px 0 50px;
+  width: 73%;
 }
 
 @media screen and (max-width: 1000px) {
@@ -50,11 +51,19 @@
   .intro {
     height: 65vh;
   }
+  .intro p{
+   
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 645px) {
   .bib {
     display: none;
+  }
+  .intro p{
+   
+    width: 100%;
   }
 
   .bib_mobile {
@@ -113,13 +122,13 @@
 }
 @media screen and (max-width: 645px) and (max-height: 580px) {
   .bib_mobile {
-    bottom: -21vh;
+    bottom: -20.5vh;
   }
 }
 
 @media screen and (max-width: 645px) and (max-height: 540px) {
   .bib_mobile {
-    bottom: -120px;
+    bottom: -116px;
   }
 }
 

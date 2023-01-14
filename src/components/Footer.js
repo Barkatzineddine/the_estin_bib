@@ -10,11 +10,13 @@ const Footer = () => {
               <div class="content">
                 <p>“Sharing is caring”</p>
 
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSccoCvtx3B7JIcNkaw9HmhAslbD_AtH61yetyYeUkrLGrVdwA/viewform?usp=sf_link">
+                  
                     <button>
-                    Contribuer
+                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSccoCvtx3B7JIcNkaw9HmhAslbD_AtH61yetyYeUkrLGrVdwA/viewform?usp=sf_link">
+                       Contribuer
+                      </a>
                    </button>
-                </a>
+               
               </div>
               <div class="content">
                 <img

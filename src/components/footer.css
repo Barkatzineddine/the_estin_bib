@@ -50,6 +50,7 @@
 }
 .left-column .content {
   width: -webkit-fill-available;
+  width: 100%;
 }
 button {
   width: -webkit-fill-available;
@@ -140,6 +141,7 @@ textarea::placeholder {
 }
 .content button{
   width: 105%;
+  min-width: 165px;
 }
 .corner {
   position: absolute;
